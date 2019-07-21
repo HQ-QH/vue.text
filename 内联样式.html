@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>内联样式</title>
+		<script type="text/javascript" src="js/vue.mini.js"></script>
+	</head>
+
+	<body>
+		<div id="nl">
+			<p :style="[obj1,obj2]">{{sex}}</p>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#nl',
+				data() {
+					return {        
+						sex: '内联样式',
+						obj1: {
+							'font-size': '100px'
+						},
+						obj2: {
+							'color': 'blue'
+						}
+					}
+				},
+				methods: {
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

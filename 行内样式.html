@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>行内样式</title>
+		<script type="text/javascript" src="js/vue.mini.js"></script>
+		<style>
+			.one {
+				color: red;
+			}
+			
+			.two {
+				font-size: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="hn">
+			<!--	<p :class="['one','two']">{{msg}}</p>    数组样式-->
+			<!--  <p :class="[flag?'one':'two']">这是行内</p>   三元表达-->
+			<!--<p :class="[{'one':flag}]">行内样式</p>       行内样式-->
+			<p :class="obb">这是行内</p>
+			<!--数组形式-->
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#hn',
+				data() {
+					return {
+						msg: '这是行内样式~',
+						flag: true,
+						/* 正确执行one*/
+						/*flag: false      错误执行two*/
+						obb: {
+							'one': true,
+							'two': true
+						}
+					}
+				},
+				methods: {
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

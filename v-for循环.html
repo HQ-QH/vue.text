@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for</title>
+		<script type="text/javascript" src="js/vue.mini.js"></script>
+
+	</head>
+
+	<body>
+		<div id="for">
+			<!--<p v-for="item in 6">{{mag}}</p> v-for循环6次  数字为几 循环几次 下表从1开始-->
+			<!--<h1 v-for="(val,key,index) in obj">{{key}}{{val}}{{index}}</h1>  遍历对象键值对-->
+			<!--<p>{{liat[2]}}</p>  获取下标为2的键值-->
+			<!--<p v-for="item in liat">{{item}}</p>获取数组内容 随时刷新-->
+			<!--<p v-for="(val,i)in liat">{{liat}}</p> 获取数组里所有内容-->
+			<!--<p v-for="(val,key) in liat">{{val}}对应的键{{key}}</p>-->
+			<p v-for="item in uer">
+				<input type="checkbox">ID为:----{{item.id}}-----姓名为:-----{{item.nam}}</p>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#for',
+				data() {
+					return {
+						/*	mag: '这是v-for的循环~',*/
+						/*list: [0, 1, 2, 6, 5, 8, 6],*/
+						/*obj: {
+							'name': '小明',
+							'age': 20
+						},*/
+						/*liat: [2, 8, 9, 0, 1, 6],*/
+						uer: [{
+							id: 1000,
+							nam: '组件'
+						}]
+					}
+				},
+				methods: {
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>内联样式</title>
+		<script type="text/javascript" src="js/vue.mini.js"></script>
+	</head>
+
+	<body>
+		<div id="nl">
+			<div v-if="isIf">
+				if
+			</div>
+			<div v-show="ifShow">
+				show
+			</div>
+			<button @click="toggleShow">toggle</button>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#nl',
+				data() {
+					return {
+						isIf: true,
+						ifShow: true,
+						loginType: "username"
+					}
+				},
+				methods: {
+					toggleShow: function() {
+						this.ifShow = this.ifShow ? false : true;
+						this.isIf = this.isIf ? false : true;
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>
